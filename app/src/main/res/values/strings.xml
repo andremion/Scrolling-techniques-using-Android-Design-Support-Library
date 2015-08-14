@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Design Support Library</string>
+    <string name="title_activity_coordinator">Coordinator Layout</string>
+    <string name="title_activity_appbar">AppBar Layout</string>
+    <string name="title_activity_tabs">Tab Layout</string>
+    <string name="title_activity_collapsing_toolbar">Collapsing Toolbar</string>
+    <string name="title_activity_collapsing_parallax">Collapsing Parallax</string>
+    <string name="title_activity_coordinator_custom_view">Coordinator Custom View</string>
+</resources>
