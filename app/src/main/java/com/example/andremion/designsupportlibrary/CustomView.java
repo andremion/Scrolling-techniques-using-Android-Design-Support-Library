@@ -2,15 +2,17 @@ package com.example.andremion.designsupportlibrary;
 
 import android.content.Context;
 import android.graphics.Rect;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.TextView;
 
-@CoordinatorLayout.DefaultBehavior(CustomView.Behavior.class)
-public class CustomView extends TextView {
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+
+import com.google.android.material.appbar.AppBarLayout;
+
+public class CustomView extends AppCompatTextView implements CoordinatorLayout.AttachedBehavior {
 
     public CustomView(Context context) {
         super(context);
@@ -22,6 +24,12 @@ public class CustomView extends TextView {
 
     public CustomView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    @NonNull
+    @Override
+    public CoordinatorLayout.Behavior getBehavior() {
+        return new Behavior();
     }
 
     public static class Behavior extends CoordinatorLayout.Behavior<CustomView> {
